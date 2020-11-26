@@ -1,0 +1,27 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "Server de rest",
+  "main": "config.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWOS-UTAGS/002-servidor-rest-Jpcr8799.git"
+  },
+  "engines":{
+    "node":"10.x"
+  },
+  "author": "Juan Pablo Carreon Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AWOS-UTAGS/002-servidor-rest-Jpcr8799/issues"
+  },
+  "homepage": "https://github.com/AWOS-UTAGS/002-servidor-rest-Jpcr8799#readme"
+}
