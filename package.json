@@ -5,7 +5,8 @@
   "main": "config.js",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.10.16"
+    "mongoose": "^5.10.16",
+    "underscore": "^1.12.0"
   },
   "devDependencies": {},
   "scripts": {
