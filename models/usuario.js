@@ -8,17 +8,17 @@ let usuarioSchema = new Schema({
         required: [true, 'El nombre es necesario']
     },
     email: {
-    type: String,
-    required: [true, 'El correo es necesario'],
-    unique: true
+        type: String,
+        required: [true, 'El correo es necesario'],
+        unique: true
     },
     password: {
         type: String,
-        required: [true, 'La contraseña es necesario'],
+        required: [true, 'La contraseña es necesaria']
     },
     img: {
         type: String,
-        requiered: false
+        required: false
     },
     role: {
         type: String,
