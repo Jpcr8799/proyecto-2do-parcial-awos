@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.send('<h1>Bienvenido a mi servidor REST</h1>');
+    res.send('<h1>Bienvenido a Starbucks</h1>');
 });
 
 app.use(require('./routes/usuario'));
