@@ -1,0 +1,67 @@
+
+<div class="container mt-5">
+
+  <table class="table">
+    <thead class="bg-primary">
+      <tr style="color: white;">
+        <th scope="col">Numero</th>
+        <th scope="col">ID</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Eliminar</th>
+
+      </tr>
+    </thead>
+    <tbody class="table-primary">
+      <tr *ngFor="let tab of tabla; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{tab._id}}</td>
+        <td>{{tab.descripcion}}</td>
+        <td>{{tab.usuario._id}}</td>
+        <td>
+          <button class="btn btn-outline-danger ml-3" (click)="elimiar(tab._id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <br>
+    <div class="jumbotron bg-success"> 
+      <h1>Registrar categorias</h1>
+      <form (ngSubmit)= "registrar(forma)" #forma = "ngForm">
+      
+        <div class="input-group-prepend">
+            <span class="input-group-text col-1">Nombre</span>
+            <input type="text" class="form-control" name="descripcion" [(ngModel)]= "categoria.descripcion"  required/>
+        </div><br>
+        <div class="input-group-prepend">
+            <span class="input-group-text col-1">Usuario</span>
+            <input type="text" class="form-control" name="usuario" [(ngModel)]= "categoria.usuario"  required/>
+        </div><br>
+        <button type="submit" [disabled]="!forma.valid" class="btn btn-primary" >Registaar</button>
+      </form>
+    </div>
+
+
+
+  <div class="jumbotron bg-success">
+    <h1>Actualizar categoria</h1>
+    <form (ngSubmit)= "actualizar(actu)" #actu = "ngForm">
+      <div class="input-group-prepend">
+        <span class="input-group-text col-1">ID</span>
+        <input type="text" class="form-control" name="id" [(ngModel)]="categoria.id"  required/>
+    </div><br> 
+      <div class="input-group-prepend">
+          <span class="input-group-text col-1">Categoria</span>
+          <input type="text" class="form-control" name="descripcion" [(ngModel)]= "categoria.descripcion"  required/>
+        </div><br>
+      <div class="input-group-prepend">
+          <span class="input-group-text col-1">Usuario</span>
+          <input type="text" class="form-control" name="usuario" [(ngModel)]= "categoria.usuario"  required/>
+      </div><br>
+      <button type="submit" [disabled]="!actu.valid" class="btn btn-primary" >Actualizar</button>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
