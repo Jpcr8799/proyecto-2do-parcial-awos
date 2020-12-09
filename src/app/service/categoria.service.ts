@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http'
 export class CategoriaService {
   url = `https://equipo3-4b-2do-parcial-awos.herokuapp.com`;
 
+
   constructor(private http: HttpClient) { }
 
   obtenerCategoria(){
@@ -27,15 +28,3 @@ export class CategoriaService {
  }
 
 }
-
-
-
-
-
-  
-
-
-
-
-  
-  
